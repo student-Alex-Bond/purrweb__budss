@@ -1,0 +1,23 @@
+{
+  "name": "purrweb__budss",
+  "version": "1.0.0",
+  "description": "test trainee in purrweb",
+  "main": "index.js",
+  "author": "alex bond",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack --mode=development",
+    "start": "webpack serve --env port=3000",
+    "build:prod": "webpack --env mode=production",
+    "build:dev": "webpack --env mode=development"
+  },
+  "devDependencies": {
+    "css-loader": "^6.8.1",
+    "pug-plugin": "^4.9.7",
+    "sass": "^1.63.6",
+    "sass-loader": "^13.3.2",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
