@@ -8,7 +8,6 @@
         "stylelint-config-rational-order/plugin"
       ],
     "rules": {
-        "indentation": ["error", 4],
         "order/properties-order": [],
         "plugin/rational-order": [true, 
         {

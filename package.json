@@ -1,6 +1,7 @@
 {
   "name": "purrweb__budss",
   "version": "1.0.0",
+  "type": "module",
   "description": "test trainee in purrweb",
   "main": "index.js",
   "author": "alex bond",
@@ -10,7 +11,8 @@
     "start": "webpack serve --env port=3000",
     "build:prod": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development",
-    "lint:fix": " eslint \"**/*.{js,pug}\" --fix",
+    "lint:fix": "eslint \"**/*.{js,pug}\" --fix",
+    "lint:scss": "npx stylelint \"**/*.scss\"",
     "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix"
   },
   "devDependencies": {
@@ -19,6 +21,7 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-pug": "^1.2.5",
+    "postcss": "^8.4.13",
     "pug-plugin": "^4.9.7",
     "sass": "^1.63.6",
     "sass-loader": "^13.3.2",
@@ -29,5 +32,6 @@
     "webpack": "^5.88.1",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
-  }
+  },
+  "dependencies": {}
 }

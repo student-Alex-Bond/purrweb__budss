@@ -1,16 +1,24 @@
-const path = require('path');
-const PugPlugin = require('pug-plugin');
+import { join, dirname } from 'path';
+import PugPlugin, { loader as _loader } from 'pug-plugin';
+import { fileURLToPath } from 'url';
 
-module.exports = (env) => ({
+// eslint-disable-next-line no-underscore-dangle
+const __filename = fileURLToPath(import.meta.url);
+// eslint-disable-next-line no-underscore-dangle
+const __dirname = dirname(__filename);
+
+export default (env) => ({
+    mode: 'development',
     entry: {
         index: './src/index.pug',
         // ☝🏽 Insert your PUG HTML files here
     },
     output: {
-        path: path.join(__dirname, 'dist/'),
+        path: join(__dirname, 'dist'),
         publicPath: '/',
-        filename: 'src/js/[name].[contenthash:8].js',
+        filename: 'js/[name].[contenthash:8].js',
         // ☝🏽 Output filename of files with hash for unique id
+        clean: true,
     },
     plugins: [
         new PugPlugin({
@@ -25,7 +33,7 @@ module.exports = (env) => ({
         rules: [
             {
                 test: /\.pug$/,
-                loader: PugPlugin.loader,
+                loader: _loader,
                 // ☝🏽 Load Pug files
             },
             {
@@ -53,15 +61,17 @@ module.exports = (env) => ({
     },
     devServer: {
         static: {
-            directory: path.join(__dirname, 'dist'),
+            directory: join(__dirname, 'dist/'),
         },
         watchFiles: {
-            paths: ['src/**/*.*', 'assets/scss/**/*.*'],
+            paths: ['./src/**/*.*', '**/*.scss*'],
             // ☝🏽 Enables HMR in these folders
             options: {
                 usePolling: true,
             },
         },
+        historyApiFallback: true,
+        hot: true,
         open: true,
         port: env.port || 3000,
     },

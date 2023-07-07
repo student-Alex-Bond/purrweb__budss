@@ -3,4 +3,7 @@ head
     meta(charset="UTF-8")
     title BUDSS
     link(href=require('./index.scss') rel='stylesheet')
-body hi
+body
+    main
+        include ./component/header/header.pug
+        script(src=require('js/index.js'))
