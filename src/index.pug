@@ -1,9 +1,13 @@
 doctype html
 head
     meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width", initial-scale=1)
     title BUDSS
     link(href=require('scss/index.scss') rel='stylesheet')
 body
     main
-        include ./component/header/header.pug
+       
+        include ./component/tabs/tabs.pug
+        div.container 
+            include ./component/header/header.pug
         script(src=require('js/index.js'))

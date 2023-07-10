@@ -1,0 +1,17 @@
+.tabs{
+    background-color: $secondary-02;
+    &__button {
+        @include B1_Medium_16;
+        font-weight: 500;
+        padding: 9px 40px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    &__button-active {
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        background-color: $grayscale-01;
+        color: $grayscale-07;   
+    }
+}
