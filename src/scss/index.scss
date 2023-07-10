@@ -1,0 +1,14 @@
+@import '../shared/_variables.scss';
+@import '../shared/_fonts.scss';
+@import '../component/header/header.scss';
+*,
+::after,
+::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Outfit-Bold', sans-serif;
+}
