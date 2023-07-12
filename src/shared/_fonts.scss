@@ -1,39 +1,39 @@
 @font-face {
-    font-family: "Outfit-Bold";
+    font-weight: 400;
+    font-family: Outfit-Bold;
+    font-style: normal;
     src: url('../fonts/Outfit-Bold.woff2'), url("../fonts/Outfit-Bold.woff");
-    font-weight: 400;
-    font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Outfit-Light";
+    font-weight: 400;
+    font-family: Outfit-Light;
+    font-style: normal;
     src: url('../fonts/Outfit-Light.woff2'), url("../fonts/Outfit-Light.woff");
-    font-weight: 400;
-    font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Outfit-Medium";
+    font-weight: 400;
+    font-family: Outfit-Medium;
+    font-style: normal;
     src: url('../fonts/Outfit-Medium.woff2'), url("../fonts/Outfit-Medium.woff");
-    font-weight: 400;
-    font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Outfit-Regular";
+    font-weight: 400;
+    font-family: Outfit-Regular;
+    font-style: normal;
     src: url('../fonts/Outfit-Regular.woff2'), url("../fonts/Outfit-Regular.woff");
-    font-weight: 400;
-    font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Outfit-Semibold";
-    src: url('../fonts/Outfit-Semibold.woff2'), url("../fonts/Outfit-Semibold.woff");
     font-weight: 400;
+    font-family: Outfit-Semibold;
     font-style: normal;
+    src: url('../fonts/Outfit-Semibold.woff2'), url("../fonts/Outfit-Semibold.woff");
     font-display: swap;
 }
