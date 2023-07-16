@@ -1,27 +1,75 @@
-
-.burger{
-    position: relative;
-    display: block;
-    width: 24px;
-    height: 2px;
+.nav {
     margin-left: auto;
-    background-color: $grayscale-07;
-
-    &::before {
-        position: absolute;
-        top: 7px;
-        width: 24px;
-        height: 2px;
-        background-color: $grayscale-07;
-        content: '';
+    &__btn{
+        margin-bottom: 177px;
     }
-
-    &::after {
+    &__overlay {
+        position: fixed;
+        transform: translateX(100%);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 50;
+        background-color: $grayscale-01;
+        padding: 196px 16px 16px 16px;
+        transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    &__img{
         position: absolute;
-        top: -7px;
-        width: 24px;
-        height: 2px;
-        background-color: $grayscale-07;
-        content: '';
+        top: 15px;
+        right: 16px;
+    }
+    &__menu {
+        &_item {
+            list-style: none;
+            margin-bottom: 16px;
+        }
+        &_link {
+            @include s5-Medium-20;
+            color: $grayscale-07;
+            text-decoration: none;
+          
+        }
     }
 }
+.showMenu {
+    transform: translate(0px, 0);
+}
+.hamburger{
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: $grayscale-01;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__icon-open{
+        cursor: pointer;
+        position: relative;
+        display: block;
+        width: 24px;
+        height: 2px;
+        background-color: $grayscale-07;
+        &::before {
+            position: absolute;
+            top: 7px;
+            right: 0;
+            width: 24px;
+            height: 2px;
+            background-color: $grayscale-07;
+            content: '';
+        }
+    
+        &::after {
+            position: absolute;
+            top: -7px;
+            right: 0;
+            width: 24px;
+            height: 2px;
+            background-color: $grayscale-07;
+            content: '';
+        }
+    }
+}
+

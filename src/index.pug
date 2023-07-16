@@ -3,15 +3,15 @@ head
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width", initial-scale=1)
     title BUDSS
-    link(href=require('scss/index.scss') rel='stylesheet')
+    link(href=require('scss/index.scss') rel='stylesheet' type="text/css")
     link(rel="icon" href=require("images/favicon/favicon.ico"))
     link(rel="apple-touch-icon" sizes="180x180" href=require("images/favicon/apple-touch-icon.png"))
     link(rel="icon" type="image/png" sizes="32x32" href=require("images/favicon/favicon-32x32.png"))
     link(rel="icon" type="image/png" sizes="16x16" href=require("images/favicon/favicon-16x16.png"))
 body
     main
-       
         include ./component/tabs/tabs.pug
-        div.container 
+        div.container     
             include ./component/header/header.pug
-        script(src=require('js/index.js'))
+            include ./component/influencer/influencer.pug
+        script(src=require('js/index.js') type="text/javascript")

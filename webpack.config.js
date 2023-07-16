@@ -1,29 +1,24 @@
-import { join, dirname } from 'path';
+import { resolve, dirname } from 'path';
 import PugPlugin, { loader as _loader } from 'pug-plugin';
 import { fileURLToPath } from 'url';
 
-// eslint-disable-next-line no-underscore-dangle
 const __filename = fileURLToPath(import.meta.url);
-// eslint-disable-next-line no-underscore-dangle
 const __dirname = dirname(__filename);
 
 export default (env) => ({
-    mode: 'development',
+    mode: env.mode === 'development' ? 'development' : 'production',
     entry: {
         index: './src/index.pug',
-        // ☝🏽 Insert your PUG HTML files here
     },
     output: {
-        path: join(__dirname, 'dist'),
+        path: resolve(__dirname, 'dist'),
         publicPath: '/',
         filename: 'js/[name].[contenthash:8].js',
-        // ☝🏽 Output filename of files with hash for unique id
         clean: true,
     },
     plugins: [
         new PugPlugin({
             pretty: true,
-            // ☝🏽 Format HTML (only in dev mode)
             css: {
                 filename: 'css/[name].[contenthash:8].css',
             },
@@ -34,7 +29,6 @@ export default (env) => ({
             {
                 test: /\.pug$/,
                 loader: _loader,
-                // ☝🏽 Load Pug files
             },
             {
                 test: /\.(css|sass|scss)$/,
@@ -43,15 +37,23 @@ export default (env) => ({
             },
             {
                 // To use images on pug files:
-                test: /\.(png|jpg|jpeg|ico)/,
+                test: /\.(png|jpg|jpeg|ico|svg)/,
                 type: 'asset/resource',
                 generator: {
                     filename: 'assets/img/[name].[hash:8][ext]',
                 },
             },
             {
+                // To use images on pug files:
+                test: /\.(svg)/,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'assets/img/icons/[name].[hash:8][ext]',
+                },
+            },
+            {
                 // To use fonts on pug files:
-                test: /\.(woff|woff2|eot|ttf|otf|svg)$/i,
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
                 type: 'asset/resource',
                 generator: {
                     filename: 'assets/fonts/[name][ext][query]',
@@ -61,14 +63,17 @@ export default (env) => ({
     },
     devServer: {
         static: {
-            directory: join(__dirname, 'dist/'),
+            directory: resolve(__dirname, 'dist/'),
         },
         watchFiles: {
             paths: ['./src/**/*.*', '**/*.scss*'],
             // ☝🏽 Enables HMR in these folders
             options: {
-                usePolling: true,
+                usePolling: false,
             },
+        },
+        client: {
+            progress: true,
         },
         historyApiFallback: true,
         hot: true,

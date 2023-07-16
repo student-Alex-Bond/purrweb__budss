@@ -1,0 +1,21 @@
+.influencer {
+    display: flex;
+    flex-direction: column;
+    padding: 122px 0 40px 0;
+    color: $grayscale-07;
+    &__title-1 {
+        @include t6-Bold-40;
+        margin-bottom: 20px;
+    }
+    &__text {
+        @include b2-Regular-16;
+        margin-bottom: 40px;
+    }
+    &__btn {
+        margin-bottom: 137px;
+    }
+    &__img {
+        align-self: end;
+        transform: translateX(16px);
+    }
+}

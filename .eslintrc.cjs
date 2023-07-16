@@ -26,6 +26,7 @@ module.exports = {
         sourceType: 'module',
     },
     rules: {
+        'no-underscore-dangle': [2, { allow: ['__filename', '__dirname'] }],
         indent: ['error', 4],
         'linebreak-style': [
             'error',

@@ -1,0 +1,10 @@
+.btn {
+    @include s4-SemiBold-20;
+
+    background-color: $primary-01;
+    padding: 16px 30px;
+    border-radius: 16px;
+    width: 100%;
+    border: none;
+    color: $grayscale-07;
+}

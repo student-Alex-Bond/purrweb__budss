@@ -9,18 +9,22 @@
 @import '../shared/_variables';
 @import '../shared/_fonts';
 @import '../shared/_typography';
+@import '../component//button/button';
 @import '../component/tabs/tabs';
 @import '../component/burger/burger';
 @import '../component/header/header';
+@import '../component/influencer/influencer';
 
 
 body {
+    overflow-x: hidden;
     font-size: 16px;
     font-family: Outfit-Bold, sans-serif;
     background: $grayscale-01;
 }
 
 .container {
+  
     min-width: 375px;
     padding: 0 16px;
 }
