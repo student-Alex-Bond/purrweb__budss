@@ -1,0 +1,15 @@
+include ../button/button.pug
+
+.cookie
+    div(style='min-height: 0')
+        .cookie__wrapper
+            button.cookie__icon
+                image(src=require('../../images/icons/icon__modal__close.svg') width=26 height=26).cookie__img
+            .cookie__text
+                p 
+                    | This website uses cookies to ensure you get the best experience on our 
+                    | website. They also allow us to analyze user behavior in order to cons
+                    | tantly improve the website for you.
+            .cookie__buttons
+                +btn('Accept')
+                +btn('Decline')(class='cookie__buttons-decline')        

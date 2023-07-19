@@ -1,56 +1,68 @@
 .nav {
     margin-left: auto;
+
     &__btn{
         margin-bottom: 177px;
     }
+
     &__overlay {
+
         position: fixed;
+        height: 100vh;
         transform: translateX(100%);
-        top: 0;
-        left: 0;
         right: 0;
-        bottom: 0;
-        z-index: 50;
+        top: 0;
+        z-index: -50;
+        padding: 196px 16px 16px;
         background-color: $grayscale-01;
-        padding: 196px 16px 16px 16px;
         transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     }
+
     &__img{
         position: absolute;
         top: 15px;
         right: 16px;
     }
+
     &__menu {
         &_item {
-            list-style: none;
             margin-bottom: 16px;
+            list-style: none;
         }
+
         &_link {
             @include s5-Medium-20;
+
             color: $grayscale-07;
             text-decoration: none;
           
         }
     }
 }
-.showMenu {
-    transform: translate(0px, 0);
+
+.show-menu {  
+    z-index: 50;
+    width: 100vw;
+    transform: translateX(0);
 }
+
 .hamburger{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 40px;
     height: 40px;
-    border: none;
     background-color: $grayscale-01;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border: none;
+
     &__icon-open{
-        cursor: pointer;
         position: relative;
         display: block;
         width: 24px;
         height: 2px;
         background-color: $grayscale-07;
+        cursor: pointer;
+
         &::before {
             position: absolute;
             top: 7px;

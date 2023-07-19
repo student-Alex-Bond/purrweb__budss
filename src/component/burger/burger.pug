@@ -3,7 +3,7 @@ include ../button/button.pug
 
 nav.nav
     button(type='button').hamburger 
-        span.hamburger__icon-open
+        span.hamburger__icon-open 
     .nav__overlay     
         image(src=require('../../images/icons/icon__close.svg') width=40 height=40).nav__img   
         +btn('Contact sales')(class='nav__btn')
@@ -11,4 +11,4 @@ nav.nav
             each val in menuItemName
                 li.nav__menu_item
                     a(href="#").nav__menu_link= val
-        
+            

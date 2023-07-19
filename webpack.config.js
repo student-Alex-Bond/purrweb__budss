@@ -16,6 +16,9 @@ export default (env) => ({
         filename: 'js/[name].[contenthash:8].js',
         clean: true,
     },
+    resolve: {
+        extensions: ['', '.js'],
+    },
     plugins: [
         new PugPlugin({
             pretty: true,
@@ -29,6 +32,21 @@ export default (env) => ({
             {
                 test: /\.pug$/,
                 loader: _loader,
+            },
+            {
+                test: /\.(?:js|mjs|cjs)$/,
+                exclude: /node_modules/,
+                resolve: {
+                    fullySpecified: false,
+                },
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: [
+                            ['@babel/preset-env', { targets: 'defaults' }],
+                        ],
+                    },
+                },
             },
             {
                 test: /\.(css|sass|scss)$/,
