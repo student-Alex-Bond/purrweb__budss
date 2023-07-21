@@ -7,4 +7,7 @@
     background-color: $primary-01;
     border: none;
     border-radius: 16px;
+    &-disabled {
+        background-color: $grayscale-03;
+    }
 }

@@ -1,0 +1,49 @@
+.form {
+    padding: 20px 16px;
+    position: absolute;
+    top: 136px;
+    left: 16px;
+    right: 16px;
+    background-color: $grayscale-07;
+    border-radius: 16px;
+    z-index: 5;
+    &__img {
+        position: absolute;
+        top: 8px;
+        right: 16px;
+    }
+    &__text{
+        margin: 10px 0 20px 0;
+        @include b5-Light-14; 
+        &-link{
+           @include b6-Light-14-Underline;
+           color: $primary-01;
+           text-decoration: underline;
+           
+        }
+    }
+
+    &__input {
+        border-radius: 14px;
+        border: 1px solid $grayscale-20;
+        background: $grayscale-07;
+        @include b4-Regular-14;
+        padding: 10px 16px;
+        color: $grayscale-03;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    &__label {
+        padding-bottom: 4px;
+        display: inline-block;
+        @include b3-Medium-14;
+        font-weight: 500;
+        &::first-letter {
+            text-transform: uppercase;
+        }
+        &_star{
+            @include b3-Medium-14;
+            color: $additional-01;
+        }
+    }
+}
