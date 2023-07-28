@@ -1,17 +1,29 @@
 include ../button/button.pug
 -
-    var formItems = [
+    var formItemsRequired = [
         {type: 'text', class: `name`}, 
         {type: 'email', class: 'email'}, 
-        {type: 'phone', class: 'phone'}, 
+        {type: 'tel', class: 'phone'}, 
+       ]  
+-
+    var formItems = [
         {type: 'text', class: 'company'}, 
-        {type: 'text', class: 'website'}]  
+        {type: 'text', class: 'website'}
+    ]
 form.form
-    image(src=require('../../images/icons/icon__modal__close.svg')).form__img
-    each it in formItems  
+    button(type='button').form__img
+        image(src=require('../../images/icons/icon__modal__close.svg') width=26 height=26)
+    each it in formItemsRequired  
         label(for= it.class  class='form__label')= it.class 
-            span.form__label_star  *
+            span.form__label_star 
+                |
+                | *
+            input(type= it.type autocomplete='on' id= it.class class = 'required__field form__input form__input-' + it.class)
+            span.form__error-message This field is required.    
+    each it in formItems 
+        label(for= it.class  class='form__label')= it.class 
         input(type= it.type autocomplete='on' id= it.class class = 'form__input form__input-' + it.class)
+    span(class='form__error-message--bottom').form__error-message Please fill in all required fields
     p.form__text 
         | By submitting this form you are agreeing to Budss’s 
         |
@@ -20,5 +32,5 @@ form.form
         | and
         | 
         a(href='#').form__text-link Terms of Use
-    +btn('Contact sales')(class='form__btn btn-disabled' type='submit')
+    +btn('Contact sales')(class='form__btn btn-disabled' type='submit' disabled)
     

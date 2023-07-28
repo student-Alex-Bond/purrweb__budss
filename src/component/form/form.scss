@@ -7,7 +7,12 @@
     background-color: $grayscale-07;
     border-radius: 16px;
     z-index: 5;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .5s linear;
     &__img {
+        border: none;
+        background-color: transparent;
         position: absolute;
         top: 8px;
         right: 16px;
@@ -24,6 +29,7 @@
     }
 
     &__input {
+        margin: 4px 0;
         border-radius: 14px;
         border: 1px solid $grayscale-20;
         background: $grayscale-07;
@@ -32,9 +38,25 @@
         color: $grayscale-03;
         width: 100%;
         margin-bottom: 10px;
+        &:focus,&:active{
+            border:  1px solid $grayscale-20;
+        }
+        &--error {
+            border: 1px solid $additional-02;
+        }
+    }
+    &__error-message{
+        display: none;
+        @include b7-Regular-12;
+        margin-bottom: 10px;
+        color: $additional-02;
+        &--bottom {
+            margin-top: 20px;
+            @include b2-Regular-16;
+        }
     }
     &__label {
-        padding-bottom: 4px;
+        width: 100%;
         display: inline-block;
         @include b3-Medium-14;
         font-weight: 500;
@@ -46,4 +68,12 @@
             color: $additional-01;
         }
     }
+}
+.flag{
+    background: url('../../images/icons/icon__flag__russia.svg') no-repeat scroll 16px center;
+    padding-left: 48px;
+}
+.show-form {
+    opacity: 1;
+    visibility: visible;
 }

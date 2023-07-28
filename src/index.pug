@@ -13,9 +13,11 @@ html(lang="en")
     main
         include ./component/cookie/cookie.pug 
         include ./component/form/form.pug
+        include ./component/modal_success/modal_success.pug
         include ./component/tabs/tabs.pug
         div.container
                
             include ./component/header/header.pug
             include ./component/influencer/influencer.pug
+
         script(src=require('js/index.js') type="text/javascript")

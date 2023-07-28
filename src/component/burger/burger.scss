@@ -6,16 +6,15 @@
     }
 
     &__overlay {
-
         position: fixed;
         height: 100vh;
-        transform: translateX(100%);
-        right: 0;
+        //transform: translateX(100%);
+        right: -100%;
         top: 0;
         z-index: -50;
         padding: 196px 16px 16px;
         background-color: $grayscale-01;
-        transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        transition: right 1.5s cubic-bezier(0.23, 1, 0.32, 1);
     }
 
     &__img{
@@ -32,10 +31,8 @@
 
         &_link {
             @include s5-Medium-20;
-
             color: $grayscale-07;
             text-decoration: none;
-          
         }
     }
 }
@@ -43,7 +40,7 @@
 .show-menu {  
     z-index: 50;
     width: 100vw;
-    transform: translateX(0);
+    right: 0;
 }
 
 .hamburger{

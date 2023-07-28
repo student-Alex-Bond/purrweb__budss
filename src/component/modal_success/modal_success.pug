@@ -1,0 +1,10 @@
+include ../button/button.pug
+
+.success
+    .success__box 
+        button(type='button').success__btn-close
+            img(src=require('../../images/icons/icon__modal__close.svg') width=26 height=26)
+        img(src=require('../../images/icons/icon__success.svg')).sucess__img-cool
+        span.success__title Thank you!
+        p.success__text Thank you, we have received your application and will contact you soon!
+        +btn('Super!')(class='success__btn')

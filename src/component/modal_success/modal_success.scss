@@ -1,0 +1,60 @@
+.success {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    z-index: 60;
+    padding: 0 20px;
+    transition: left .7s linear;
+    &__title {
+        @include s2-SemiBold-24;
+        color: $primary-02; 
+    }
+    &__text {
+        text-align: center;
+        color: $grayscale-02;
+        @include s6-Regular-20;
+    }
+    &__box{
+        position: relative;
+        display: flex;
+        
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 40px;
+        background-color: $grayscale-07;
+        border-radius: 20px;
+    }
+    &__btn-close {
+        position: absolute;
+        top: 16px;
+        right: 12px;
+        border: none;
+        background-color:transparent;
+    }
+}
+
+.show-success{
+ left: 0;
+}
+
+@keyframes animation-for-modal-success {
+    0% {
+        left: -100%;
+    }
+    95%{
+        left: 7px;
+    }
+    97% {
+       left: -7px
+    }
+    100% {
+        left: 0;
+    }
+}
