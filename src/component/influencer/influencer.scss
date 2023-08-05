@@ -3,15 +3,28 @@
     flex-direction: column;
     padding: 122px 0 40px;
     color: $grayscale-07;
+    margin-bottom: 40px;
+    @include respond(){
+        padding: 80px 0 0 60px;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 100px;
+    }
 
     &__title-1 {
         @include t6-Bold-40;
-
+        @include respond(){
+            @include t2-Bold-96; 
+        }
         margin-bottom: 20px;
     }
 
     &__text {
         @include b2-Regular-16;
+        @include respond(){
+            @include s6-Regular-20;
+            padding-right: 137px;
+        }
 
         margin-bottom: 40px;
     }
@@ -23,5 +36,9 @@
     &__img {
         align-self: end;
         transform: translateX(16px);
+        @include respond(){
+            width: 595px;
+            height: 529px;
+        }
     }
 }

@@ -55,7 +55,7 @@ export default (env) => ({
             },
             {
                 // To use images on pug files:
-                test: /\.(png|jpg|jpeg|ico|svg)/,
+                test: /\.(png|jpg|jpeg|ico|svg|webp)/,
                 type: 'asset/resource',
                 generator: {
                     filename: 'assets/img/[name].[hash:8][ext]',

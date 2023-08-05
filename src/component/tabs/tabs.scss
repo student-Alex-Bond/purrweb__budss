@@ -1,6 +1,8 @@
 .tabs{
     background-color: $secondary-02;
-
+    @include respond() {
+        padding-left: 60px;
+    }
     &__button {
         @include b1-Medium-16;
 

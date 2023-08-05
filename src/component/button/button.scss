@@ -7,7 +7,11 @@
     background-color: $primary-01;
     border: none;
     border-radius: 16px;
+    cursor: pointer;
     &-disabled {
         background-color: $grayscale-03;
+    }
+    @include respond(){
+        width: 182px;
     }
 }

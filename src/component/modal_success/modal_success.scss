@@ -11,6 +11,8 @@
     z-index: 60;
     padding: 0 20px;
     transition: left .7s linear;
+        
+    
     &__title {
         @include s2-SemiBold-24;
         color: $primary-02; 
@@ -30,6 +32,15 @@
         padding: 40px;
         background-color: $grayscale-07;
         border-radius: 20px;
+        @include respond(){
+            padding: 40px;
+            width: 417px;
+    }
+    }
+    &__btn{
+        @include respond(){
+            width: 100%;
+        }
     }
     &__btn-close {
         position: absolute;

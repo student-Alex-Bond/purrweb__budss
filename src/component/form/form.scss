@@ -1,15 +1,26 @@
 .form {
-    padding: 20px 16px;
     position: absolute;
-    top: 136px;
-    left: 16px;
-    right: 16px;
+    padding: 20px 16px;
     background-color: $grayscale-07;
     border-radius: 16px;
-    z-index: 5;
-    visibility: hidden;
-    opacity: 0;
     transition: opacity .5s linear;
+    @include respond(){
+        padding: 40px;
+        width: 417px;
+    }
+    &__popup {
+        visibility: hidden;
+        opacity: 0;
+        z-index: 5;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     &__img {
         border: none;
         background-color: transparent;

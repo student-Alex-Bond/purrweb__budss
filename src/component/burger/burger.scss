@@ -3,12 +3,17 @@
 
     &__btn{
         margin-bottom: 177px;
+        &-desktop {
+            display: none;
+            @include respond() {
+                display: block;
+            }
+        }
     }
 
     &__overlay {
         position: fixed;
         height: 100vh;
-        //transform: translateX(100%);
         right: -100%;
         top: 0;
         z-index: -50;
@@ -51,6 +56,9 @@
     height: 40px;
     background-color: $grayscale-01;
     border: none;
+    @include respond() {
+        display: none;
+    }
 
     &__icon-open{
         position: relative;

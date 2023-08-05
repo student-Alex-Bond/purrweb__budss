@@ -9,8 +9,9 @@
 @import '../shared/_variables';
 @import '../shared/_fonts';
 @import '../shared/_typography';
-@import '../component//button/button';
-@import '../component//cookie/cookie';
+@import '../shared/mixins';
+@import '../component/button/button';
+@import '../component/cookie/cookie';
 @import '../component/tabs/tabs';
 @import '../component/burger/burger';
 @import '../component/header/header';
@@ -29,4 +30,7 @@ body{
 .container {
     min-width: 375px;
     padding: 0 16px;
+    @include respond(){
+        padding: 0;
+    }
 }

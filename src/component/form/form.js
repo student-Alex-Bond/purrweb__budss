@@ -1,5 +1,9 @@
+/* eslint-disable no-plusplus */
+/* eslint-disable no-const-assign */
+/* eslint-disable no-nested-ternary */
 export default (() => {
     const button = document.querySelector('.influencer__btn');
+    const showPopup = document.querySelector('.form__popup');
     const form = document.querySelector('.form');
     const closeForm = form.querySelector('.form__img');
     const inputs = form.querySelectorAll('.required__field');
@@ -11,7 +15,7 @@ export default (() => {
     const inputTel = 2;
 
     const showForm = () => {
-        form.classList.toggle('show-form');
+        showPopup.classList.toggle('show-form');
     };
 
     inputs[inputTel].classList.add('flag');
@@ -40,6 +44,25 @@ export default (() => {
         }
     };
 
+    const inputNumberMask = (event) => {
+        const matrix = '+7(___) ___-__-__';
+        let i = 0;
+
+        const def = matrix.replace(/\D/g, '');
+        let val = event.target.value.replace(/\D/g, '');
+        if (event.type === 'blur') {
+            if (val.length < matrix.match(/([\\_\d])/g).length) {
+                // eslint-disable-next-line no-param-reassign
+                event.target.value = '';
+                return;
+            }
+        }
+        if (def.length >= val.length) val = def;
+        // no-nested-ternary, no-const-assign, no-plusplus, no-param-reassign
+        // eslint-disable-next-line no-param-reassign
+        event.target.value = matrix.replace(/./g, (a) => (/[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? '' : a));
+    };
+
     const sendForm = (event) => {
         event.preventDefault();
         showForm();
@@ -47,6 +70,7 @@ export default (() => {
         modalSuccess.style.animationName = 'animation-for-modal-success';
         modalSuccess.classList.add('show-success');
     };
+    inputs[inputTel].addEventListener('input', inputNumberMask);
     inputs.forEach((input) => {
         input.addEventListener('keyup', validateForm);
     });

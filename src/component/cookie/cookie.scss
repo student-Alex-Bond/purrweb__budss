@@ -11,16 +11,19 @@
     box-shadow: -10px -5px 30px 0 rgb(141 141 141 / 10%);
     transition: all 1.5s cubic-bezier(.31,.01,.68,1.03);
     overflow: hidden;
-    &__wrapper{
-      
-        padding: 30px 20px;  
-      
+    @include respond(){
+        right: 0;
+        left: 0;
+        margin: 0 65px 0 90px;
     }
-    
-    &__img {
-        position: absolute;
-        top: 16px;
-        right: 16px;
+    &__wrapper{
+        display: flex;
+        padding: 30px 20px;
+        @include respond(){
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px;
+        }    
     }
 
     &__text {
@@ -28,21 +31,34 @@
         color: $grayscale-01;
 
         @include s7-Light-20;
+        @include respond(){
+            padding-bottom: 0;
+            padding-right: 140px;
+        }
     }
 
     &__buttons{
         display: flex;
         flex-flow: column nowrap;
         gap:20px;
+        @include respond(){
+            flex-direction: row;
+        }
 
         &-decline {
             color: $grayscale-00;
             background-color: transparent;
             border: 2px solid $primary-01;
+            @include respond(){
+                margin-right: 20px;
+            }
         }
     }
 
     &__icon {
+        position: absolute;
+        top: 16px;
+        right: 16px;
         background-color: transparent;
         border: none;
     }

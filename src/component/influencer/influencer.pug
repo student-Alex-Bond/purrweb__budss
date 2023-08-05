@@ -1,8 +1,13 @@
 section.influencer 
-    h1.influencer__title-1 Everyone<br> is an Influencer
-    p.influencer__text 
-        | Budss is a payments as a service and WOM engine dedicated to acquisition and retention 
-        | of customers to your business.
-    include ../button/button.pug
-    +btn('Contact sales')(class='influencer__btn')
-    image(src=require('../../images/chika.png')).influencer__img
+    .influencer__container
+        h1.influencer__title-1 Everyone<br> is an Influencer
+        p.influencer__text 
+            | Budss is a payments as a service and WOM engine dedicated to acquisition and retention 
+            | of customers to your business.
+        include ../button/button.pug
+        +btn('Contact sales')(class='influencer__btn')
+    picture.influencer__img
+        source(media="(max-width: 376px)", srcset=require('../../images/chika.png'))
+        source(media="(max-width: 1241px)", srcset=require('../../images/chika__desktop.webp'))
+        source(media="(min-width: 1439px)", srcset=(require('../../images/chika__desktop__2x.webp') + ' ' +'2x'))
+        img(src=require('../../images/chika.png'))
