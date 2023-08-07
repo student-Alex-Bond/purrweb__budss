@@ -19,6 +19,7 @@
 @import '../component/form/form';
 @import '../component/modal_success/modal_success';
 @import '../component/about_budds/about_budds';
+@import '../component/budds_works/budds_works';
 
 body{
     position: relative;
@@ -38,5 +39,6 @@ body{
     }
 }
 main {
+    margin: 0 auto;
     max-width: 1440px;
 }

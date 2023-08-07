@@ -1,5 +1,5 @@
 .form {
-    position: fixed;
+    position: relative;
     padding: 20px 16px;
     background-color: $grayscale-07;
     border-radius: 16px;
@@ -12,16 +12,14 @@
         visibility: hidden;
         opacity: 0;
         z-index: 5;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100vw;
         height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        padding: 0 20px;
     }
-    &__img {
+    &__btn-close {
         border: none;
         background-color: transparent;
         position: absolute;
@@ -80,7 +78,7 @@
         }
     }
 }
-.flag{
+.flag {
     background: url('../../images/icons/icon__flag__russia.svg') no-repeat scroll 16px center;
     padding-left: 48px;
 }
