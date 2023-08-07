@@ -18,6 +18,7 @@
 @import '../component/influencer/influencer';
 @import '../component/form/form';
 @import '../component/modal_success/modal_success';
+@import '../component/about_budds/about_budds';
 
 body{
     position: relative;
@@ -31,6 +32,11 @@ body{
     min-width: 375px;
     padding: 0 16px;
     @include respond(){
+        margin: 0 auto;
+        max-width: 1440px;
         padding: 0;
     }
+}
+main {
+    max-width: 1440px;
 }
