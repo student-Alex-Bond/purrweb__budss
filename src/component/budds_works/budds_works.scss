@@ -4,6 +4,37 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @include respond(){
+        padding: 100px 0;
+        padding-top: 136px;
+    }
+    &__box-animation {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    &__video {
+        width: 213px;
+        height: 446px;
+        border-radius: 36px;
+        @include respond(){
+            width: 288px;
+            height: 603px;
+        }
+    }
+    &__img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 228px;
+        height: 461px;
+        @include respond(){
+            width: 308px;
+            height: 623px;
+        }
+    }
     &__wrapper {
         position: absolute;
         top:0;
@@ -16,12 +47,15 @@
         flex-direction: column;
         gap: 93px;
         overflow: hidden;
+        @include respond(){
+            gap: 68px;
+        }
+
     } 
     &__rinning-string{
         user-select: none;
         transition: all 0.1s ease-in-out;
         display: block;
-
         animation: scroll 20s linear infinite;
         @include t4-Bold-48;
         white-space: nowrap;
@@ -36,18 +70,23 @@
     
         }
         &:nth-child(3){
+            position: relative;
+            left: 100px;
             color: $secondary-02;
+            @include respond(){
+                left: 400px;
+            }
         }
     }
     &__rinning-substring{
         color: transparent;
 
-        -webkit-text-stroke: 0.2px #fff;
+        -webkit-text-stroke: 0.2px $grayscale-07;
     
         -webkit-background-clip: text;
         background-clip: text;
         @include respond(){
-            -webkit-text-stroke: 0.4px #fff;
+            -webkit-text-stroke: 0.4px $grayscale-07;
         }
     }
 }

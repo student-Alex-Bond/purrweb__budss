@@ -27,6 +27,9 @@ export default (env) => ({
             },
         }),
     ],
+    performance: {
+        hints: false,
+    },
     module: {
         rules: [
             {
@@ -55,7 +58,7 @@ export default (env) => ({
             },
             {
                 // To use images on pug files:
-                test: /\.(png|jpg|jpeg|ico|svg|webp)/,
+                test: /\.(png|jpg|jpeg|ico|svg|webp|mp4)/,
                 type: 'asset/resource',
                 generator: {
                     filename: 'assets/img/[name].[hash:8][ext]',

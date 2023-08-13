@@ -1,0 +1,12 @@
+-
+    var advantages = [
+        {percent: '15%', text: 'Increase in Purchase Amount'},
+        {percent: '30%', text: 'Growth in Annual Sales'},
+        {percent: '10%', text: 'Growth in New Customers'},
+    ]
+
+section.advantages
+    each it in advantages
+        p.advantages__text= it.percent
+            |  
+            span.advantages__string= it.text   
