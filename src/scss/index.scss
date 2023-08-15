@@ -10,6 +10,7 @@
 @import '../shared/_fonts';
 @import '../shared/_typography';
 @import '../shared/mixins';
+@import '../component/menu_items/menu_items';
 @import '../component/button/button';
 @import '../component/cookie/cookie';
 @import '../component/tabs/tabs';
@@ -22,6 +23,8 @@
 @import '../component/budds_works/budds_works';
 @import '../component/advantages/advantages';
 @import '../component/benefit_budds/benefit_budds';
+@import '../component/business_grow/business_grow';
+@import '../component/footer/footer';
 
 body{
     position: relative;

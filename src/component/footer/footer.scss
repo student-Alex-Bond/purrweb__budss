@@ -1,0 +1,86 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px 16px; 
+    @include respond(){
+        display: grid;
+        grid-template-columns: 21% 31% 17% 1fr;
+        grid-template-rows: repeat(2, min-content);
+        align-items: center;
+        padding: 40px 60px 20px 60px;
+        gap: 30px 0;
+    }
+    &__logo {
+        width: 155px;
+        height: 57px;
+    }
+    &__links{
+        display: none;
+        @include respond(){
+            display: flex;
+            gap: 40px;
+        }
+    }
+    &__link {
+        @include s5-Medium-20;
+        color: $grayscale-07;
+        text-decoration: none;
+    }
+    &__list {
+        @include respond(){
+            display: none;
+        }
+        
+    }
+    &__btn {
+        width: 182px;
+    }
+    &__stors {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        @include respond(){
+            flex-direction: row;
+        }
+    }
+    &__copyright {
+        @include respond(){
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+        &_divider {
+            height: 2px;
+            background-color: #444;
+            margin-bottom: 10px;
+            @include respond(){
+                grid-column: 1 / -1;
+            }
+        }
+        &_text {
+            color: $grayscale-03;
+            font-family: Outfit;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 150%;
+        }
+        &_other-links{
+            display: none;
+            @include respond(){
+                list-style: none;
+                display: flex;
+                gap:20px;
+                justify-self: flex-end;
+            }
+        }
+        &_link {
+            @include b6-Light-14-Underline;
+            color: $grayscale-03;
+        }
+        
+    }
+
+}

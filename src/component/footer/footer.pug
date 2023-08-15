@@ -1,0 +1,26 @@
+include ../logo/logo.pug
+include ../menu_items/menu_items.pug 
+include ../button/button.pug
+footer.footer
+    +logo()(class='footer__logo')
+    +menu()(class='footer__list')
+    .footer__links 
+        a(href='#').footer__link For Businnes
+        a(href='#').footer__link For Customers
+    .footer__btn
+        +btn('Contact sales')
+    .footer__stors
+        a(href='#').footer__stors-link
+            img(src=require('../../images/apple__store.svg')).footer__stors-img   
+        a(href='#').footer__stors-link
+            img(src=require('../../images/google__play.svg')).footer__stors-img  
+    .footer__copyright    
+        hr.footer__copyright_divider
+        p.footer__copyright_text © Copyright 2023, All Rights Reserved by Budss
+        ul.footer__copyright_other-links
+            li.footer__copyright_item 
+                a(href='#').footer__copyright_link Privacy Policy        
+            li.footer__copyright_item 
+                a(href='#').footer__copyright_link Terms Of Use - Seller    
+            li.footer__copyright_item 
+                a(href='#').footer__copyright_link Terms of Use - Sellers & Customers    

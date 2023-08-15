@@ -2,7 +2,7 @@
 /* eslint-disable no-const-assign */
 /* eslint-disable no-nested-ternary */
 export default (() => {
-    const button = document.querySelector('.influencer__btn');
+    const btns = document.querySelectorAll('button');
     const showPopup = document.querySelector('.form__popup');
     const form = document.querySelector('.form');
     const closeForm = form.querySelector('.form__btn-close');
@@ -17,7 +17,11 @@ export default (() => {
     const showForm = () => {
         showPopup.classList.toggle('show-form');
     };
-
+    console.log(btns.forEach((el) => {
+        if (el.classList.contains('businnes-grow__btn')) {
+            el.textContent();
+        }
+    }));
     inputs[inputTel].classList.add('flag');
     const validateForm = (event) => {
         const isEmptyInputName = Boolean(inputs[inputName].value);
@@ -75,6 +79,10 @@ export default (() => {
         input.addEventListener('keyup', validateForm);
     });
     closeForm.addEventListener('click', showForm);
-    button.addEventListener('click', showForm);
     form.addEventListener('submit', sendForm);
+    btns.forEach((btn) => {
+        if (btn.textContent === 'Contact sales' && !btn.classList.contains('form__btn')) {
+            btn.addEventListener('click', showForm);
+        }
+    });
 })();

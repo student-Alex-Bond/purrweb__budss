@@ -1,0 +1,31 @@
+include ../button/button.pug
+
+-
+    var srcIcons =[
+        '../../images/icons/icon__facebook.svg',
+        '../../images/icons/icon__twitter.svg',
+        '../../images/icons/icon__instagram.svg',
+        '../../images/icons/icon__tiktok.svg'
+        ]
+     var srcBrands = [
+        '../../images/icons/icon__square.svg',
+        '../../images/icons/icon__spotify.svg',
+        '../../images/icons/icon__woo.svg',
+        '../../images/icons/icon__square-space.svg',
+        '../../images/icons/icon__clover.svg',
+     ]    
+
+section.business-grow
+    .business-grow__wrapper 
+        h2.business-grow__title Let Your Business Grow
+        +btn('Contact sales')(class='business-grow__btn')
+    .business-grow__description 
+        div
+            h2.business-grow__title.business-grow__title-description Your Brand<br> Awareness Maters   
+            p.business-grow__text Budss is a husle free solution to put your brand on any digital surface including Instagram, Facebook, Twitter and TikTok 
+        .business-grow__social-icons
+            each it in srcIcons
+                img(src=require(it)).business-grow__icon-img
+    .business-grow__brands 
+        each it in srcBrands 
+            img(src=require(it)).business-grow__icon-img.business-grow__icon-img--brands

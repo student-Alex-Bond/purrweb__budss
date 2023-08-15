@@ -1,4 +1,4 @@
-- var menuItemName = ['For Business', 'For Customers', 'Privacy Policy', 'Terms Of Use - Seller', 'Terms of Use - Sellers & Customers']
+- var menuItems = ['For Business', 'For Customers', 'Privacy Policy', 'Terms Of Use - Seller', 'Terms of Use - Sellers & Customers']
 include ../button/button.pug
 
 nav.nav
@@ -9,7 +9,7 @@ nav.nav
         image(src=require('../../images/icons/icon__close.svg') width=40 height=40).nav__img   
         +btn('Contact sales')(class='nav__btn')
         ul.nav__menu
-            each val in menuItemName
+            each val in menuItems
                 li.nav__menu_item
                     a(href="#").nav__menu_link= val
             
