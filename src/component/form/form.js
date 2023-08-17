@@ -17,11 +17,6 @@ export default (() => {
     const showForm = () => {
         showPopup.classList.toggle('show-form');
     };
-    console.log(btns.forEach((el) => {
-        if (el.classList.contains('businnes-grow__btn')) {
-            el.textContent();
-        }
-    }));
     inputs[inputTel].classList.add('flag');
     const validateForm = (event) => {
         const isEmptyInputName = Boolean(inputs[inputName].value);

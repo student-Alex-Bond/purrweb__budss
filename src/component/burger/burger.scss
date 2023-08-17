@@ -3,9 +3,11 @@
 
     &__btn{
         margin-bottom: 177px;
+
         &-desktop {
             display: none;
-            @include respond() {
+
+            @include respond {
                 display: block;
             }
         }
@@ -13,10 +15,10 @@
 
     &__overlay {
         position: fixed;
-        height: 100vh;
-        right: -100%;
         top: 0;
+        right: -100%;
         z-index: -50;
+        height: 100vh;
         padding: 196px 16px 16px;
         background-color: $grayscale-01;
         transition: right 1.5s cubic-bezier(0.23, 1, 0.32, 1);
@@ -35,17 +37,18 @@
         }
 
         &_link {
-            @include s5-Medium-20;
+            @include s5-medium-20;
+
             color: $grayscale-07;
             text-decoration: none;
         }
     }
 }
 
-.show-menu {  
+.show-menu {
+    right: 0;  
     z-index: 50;
     width: 100vw;
-    right: 0;
 }
 
 .hamburger{
@@ -56,7 +59,8 @@
     height: 40px;
     background-color: $grayscale-01;
     border: none;
-    @include respond() {
+
+    @include respond {
         display: none;
     }
 

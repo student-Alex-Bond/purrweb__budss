@@ -10,10 +10,11 @@ include ../button/button.pug
         {type: 'text', class: 'company', placeholder: `Enter company`}, 
         {type: 'text', class: 'website', placeholder: `Enter Website/Store Url`}
     ]
-section.form__popup    
+section.form__popup  
+    h2.visually-hidden form feedback
     form.form
         button(type='button').form__btn-close
-            image(src=require('../../images/icons/icon__modal__close.svg') width=26 height=26)
+            img(src=require('../../images/icons/icon__modal__close.svg') alt='icon closed' width=26 height=26)
         each it in formItemsRequired  
             label(for= it.class  class='form__label')= it.class 
                 span.form__label_star 

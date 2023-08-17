@@ -25,7 +25,7 @@ section.business-grow
             p.business-grow__text Budss is a husle free solution to put your brand on any digital surface including Instagram, Facebook, Twitter and TikTok 
         .business-grow__social-icons
             each it in srcIcons
-                img(src=require(it)).business-grow__icon-img
+                img(src=require(it) alt='some icon').business-grow__icon-img
     .business-grow__brands 
         each it in srcBrands 
-            img(src=require(it)).business-grow__icon-img.business-grow__icon-img--brands
+            img(src=require(it) alt='some brand').business-grow__icon-img.business-grow__icon-img--brands

@@ -1,44 +1,62 @@
 .advantages{
-    background-color: $primary-01;
-    padding: 40px 16px;
-    width: 100%;
-    color: $grayscale-07;
     display: flex;
-    gap: 40px;
     flex-direction: column;
-    @include respond(){
-        padding: 40px 0;
-        justify-content: center;
+    gap: 40px;
+    width: 100%;
+    padding: 40px 16px;
+    color: $grayscale-07;
+    background-color: $primary-01;
+
+    @include respond{
         flex-direction: row;
         gap:100px;
+        justify-content: center;
+        padding: 40px 0;
     }
+
+    &__br{
+        display: none;
+
+        @include respond{
+            display: block;
+        }
+    }
+
     &__text{
         display: flex;
         flex-wrap: nowrap;
         gap: 17px;
         align-items: center;
-        @include t6-Bold-40;
-        @include respond(){
-            gap:16px;
+
+        @include t6-bold-40;
+
+        @include respond{
             flex-direction: column;
+            gap:16px;
             align-items: start;
-            @include t3-Bold-64;
+
+            @include t3-bold-64;
+
             &:nth-child(1){
                 width: 217px;
             }
+
             &:nth-child(2){
                 width: 163px;
             }
+
             &:nth-child(3){
                 width: 161px;
             }
         }
        
     }
+
     &__string {
-        @include s4-SemiBold-20;
-        @include respond(){
-            @include s2-SemiBold-24;
+        @include s4-semibold-20;
+
+        @include respond{
+            @include s2-semibold-24;
         }
     }
 }

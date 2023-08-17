@@ -2,27 +2,27 @@ doctype html
 html(lang="en")
     head
         meta(charset="UTF-8")
-        meta(name="viewport" content="width=device-width", initial-scale=1)
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
         title BUDSS
-        link(href=require('scss/index.scss') rel='stylesheet' type="text/css")
+        link(href=require('./scss/index.scss') rel='stylesheet' type="text/css")
         link(rel="icon" href=require("images/favicon/favicon.ico"))
         link(rel="apple-touch-icon" sizes="180x180" href=require("images/favicon/apple-touch-icon.png"))
         link(rel="icon" type="image/png" sizes="32x32" href=require("images/favicon/favicon-32x32.png"))
         link(rel="icon" type="image/png" sizes="16x16" href=require("images/favicon/favicon-16x16.png"))
     body
-    main
-        include ./component/cookie/cookie.pug 
-        include ./component/form/form.pug
-        include ./component/modal_success/modal_success.pug
-        include ./component/tabs/tabs.pug
-        include ./component/header/header.pug
-        div.container
+        main
+            include ./component/cookie/cookie.pug 
+            include ./component/form/form.pug
+            include ./component/modal_success/modal_success.pug
+            include ./component/tabs/tabs.pug
+            include ./component/header/header.pug
             include ./component/influencer/influencer.pug
-            include ./component/about_budds/about_budds.pug
-        include ./component/budds_works/budds_works.pug
-        include ./component/advantages/advantages.pug
-        include ./component/benefit_budds/benefit_budds.pug
-        include ./component/business_grow/business_grow.pug
-        include ./component/footer/footer.pug
+            include ./component/about_budss/about_budss.pug
+            include ./component/budss_works/budss_works.pug
+            include ./component/advantages/advantages.pug
+            include ./component/benefit_budss/benefit_budss.pug
+            include ./component/business_grow/business_grow.pug
+            include ./component/footer/footer.pug
 
-        script(src=require('js/index.js') type="text/javascript")
+            script(src=require('js/index.js'))

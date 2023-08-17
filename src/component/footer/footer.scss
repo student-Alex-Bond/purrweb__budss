@@ -3,81 +3,99 @@
     flex-direction: column;
     gap: 40px;
     padding: 20px 16px; 
-    @include respond(){
+
+    @include respond{
         display: grid;
-        grid-template-columns: 21% 31% 17% 1fr;
         grid-template-rows: repeat(2, min-content);
-        align-items: center;
-        padding: 40px 60px 20px 60px;
+        grid-template-columns: 21% 31% 17% 1fr;
         gap: 30px 0;
+        align-items: center;
+        padding: 40px 60px 20px;
     }
+
     &__logo {
         width: 155px;
         height: 57px;
     }
+
     &__links{
         display: none;
-        @include respond(){
+
+        @include respond{
             display: flex;
             gap: 40px;
         }
     }
+
     &__link {
-        @include s5-Medium-20;
+        @include s5-medium-20;
+
         color: $grayscale-07;
         text-decoration: none;
     }
+
     &__list {
-        @include respond(){
+        @include respond{
             display: none;
         }
         
     }
+
     &__btn {
         width: 182px;
     }
+
     &__stors {
         display: flex;
         flex-direction: column;
         gap: 20px;
-        @include respond(){
+
+        @include respond{
             flex-direction: row;
         }
     }
+
     &__copyright {
-        @include respond(){
-            grid-column: 1 / -1;
+        @include respond{
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-column: 1 / -1;
             grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr);
         }
+
         &_divider {
             height: 2px;
-            background-color: #444;
             margin-bottom: 10px;
-            @include respond(){
+            background-color: #444;
+
+            @include respond{
                 grid-column: 1 / -1;
             }
         }
+
         &_text {
             color: $grayscale-03;
-            font-family: Outfit;
-            font-size: 14px;
-            font-style: normal;
             font-weight: 300;
+            font-size: 14px;
+            font-family: Outfit, Arial, sans-serif;
+            font-style: normal;
             line-height: 150%;
         }
+
         &_other-links{
             display: none;
-            @include respond(){
-                list-style: none;
+
+            @include respond{
                 display: flex;
                 gap:20px;
                 justify-self: flex-end;
+                list-style: none;
             }
         }
+
         &_link {
-            @include b6-Light-14-Underline;
+            @include b6-light-14-underline;
+
             color: $grayscale-03;
         }
         

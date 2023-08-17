@@ -1,6 +1,7 @@
 include ../logo/logo.pug
 include ../menu_items/menu_items.pug 
 include ../button/button.pug
+
 footer.footer
     +logo()(class='footer__logo')
     +menu()(class='footer__list')
@@ -10,10 +11,10 @@ footer.footer
     .footer__btn
         +btn('Contact sales')
     .footer__stors
-        a(href='#').footer__stors-link
-            img(src=require('../../images/apple__store.svg')).footer__stors-img   
-        a(href='#').footer__stors-link
-            img(src=require('../../images/google__play.svg')).footer__stors-img  
+        a(href='#' target='_blank').footer__stors-link
+            img(src=require('../../images/apple__store.svg') alt='app store').footer__stors-img   
+        a(href='#' target='_blank').footer__stors-link
+            img(src=require('../../images/google__play.svg') alt='google play').footer__stors-img  
     .footer__copyright    
         hr.footer__copyright_divider
         p.footer__copyright_text © Copyright 2023, All Rights Reserved by Budss

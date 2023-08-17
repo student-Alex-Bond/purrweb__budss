@@ -4,40 +4,50 @@
     background-color: $grayscale-07;
     border-radius: 16px;
     transition: opacity .5s linear;
-    @include respond(){
-        padding: 40px;
+
+    @include respond{
         width: 417px;
+        padding: 40px;
     }
+
     &__popup {
-        visibility: hidden;
-        opacity: 0;
-        z-index: 5;
         position: fixed;
         top: 0;
         left: 0;
+        z-index: 5;
+        display: flex;
+        align-items: center;
         width: 100vw;
         height: 100vh;
         padding: 0 20px;
-        @include respond(){
+        visibility: hidden;
+        opacity: 0;
+
+        @include respond{
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
         }
        
     }
+
     &__btn-close {
-        border: none;
-        background-color: transparent;
         position: absolute;
         top: 8px;
         right: 16px;
+        background-color: transparent;
+        border: none;
         cursor: pointer;
     }
+
     &__text{
-        margin: 10px 0 20px 0;
-        @include b5-Light-14; 
+        margin: 10px 0 20px;
+
+        @include b5-light-14; 
+
         &-link{
-           @include b6-Light-14-Underline;
+           @include b6-light-14-underline;
+
            color: $primary-01;
            text-decoration: underline;
            
@@ -45,51 +55,67 @@
     }
 
     &__input {
+        width: 100%;
         margin: 4px 0;
-        border-radius: 14px;
-        border: 1px solid $grayscale-20;
-        background: $grayscale-07;
-        @include b4-Regular-14;
+        margin-bottom: 10px;
         padding: 10px 16px;
         color: $grayscale-03;
-        width: 100%;
-        margin-bottom: 10px;
+        background: $grayscale-07;
+        border: 1px solid $grayscale-20;
+        border-radius: 14px;
+
+        @include b4-regular-14;
+
         &:focus,&:active{
             border:  1px solid $grayscale-20;
         }
+
         &--error {
             border: 1px solid $additional-02;
         }
     }
+
     &__error-message{
         display: none;
-        @include b7-Regular-12;
+
+        @include b7-regular-12;
+
         margin-bottom: 10px;
         color: $additional-02;
+
         &--bottom {
             margin-top: 20px;
-            @include b2-Regular-16;
+
+            @include b2-regular-16;
         }
     }
+
     &__label {
-        width: 100%;
         display: inline-block;
-        @include b3-Medium-14;
+        width: 100%;
         font-weight: 500;
+
+        @include b3-medium-14;
+
         &::first-letter {
             text-transform: uppercase;
         }
+
         &_star{
-            @include b3-Medium-14;
+            @include b3-medium-14;
+
             color: $additional-01;
         }
     }
 }
+
 .flag {
-    background: url('../../images/icons/icon__flag__russia.svg') no-repeat scroll 16px center;
+    z-index: 6;
     padding-left: 48px;
+    background: url('../../images/icons/icon__flag__russia.svg') no-repeat scroll 16px center;
 }
+
 .show-form {
-    opacity: 1;
     visibility: visible;
+    opacity: 1;
 }

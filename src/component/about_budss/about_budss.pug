@@ -1,0 +1,34 @@
+-
+    var cardItems = [
+        {   srcImg: '../../images/card__item-1.svg', 
+            title: 'Contactless', 
+            text: 'Budss uses near field communication (NFC) for making contactless payments.'
+        },
+        {   srcImg: '../../images/card__item-2.svg', 
+            title: 'Increased Buying Power', 
+            text: 'Returning customers spend up to 3X more.'
+        },
+        {   srcImg: '../../images/card__item-3.svg', 
+            title: 'Analytics & Insights', 
+            text: 'Gain a holistic view into your customers’ buying behavior & purchasing patterns.'
+        },
+        {   srcImg: '../../images/card__item-4.svg', 
+            title: 'Fraud Protection', 
+            text: 'Budss handles all payments with a fraud prevention algorithm to flag high risk purchases & a user set PIN code to keep payment info secure.'
+        }
+    ]
+
+section.about-budss 
+    h2.about-budss__title About Budss
+    p.about-budss__text 
+        | Payment as a service,<br> powered seamlessly by<br> our 
+        |
+        span.about-budss__accent network of shoppers
+    img(src=require('../../images/big__b.svg') width=423 height=489 alt='some background big b').about-budss__img
+    ul.about-budss__list
+        each it in cardItems
+            li.about-budss__item
+                - var src= require(it.srcImg) 
+                img(src= src width=100 height=100 alt='icon').about-budss__item-img
+                h3.about-budss__item-title= it.title 
+                p.about-budss__item-text= it.text

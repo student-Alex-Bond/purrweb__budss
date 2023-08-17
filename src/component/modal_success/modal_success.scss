@@ -1,53 +1,59 @@
 .success {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: fixed;
     top: 0;
     left: -100%;
+    z-index: 60;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100vw;
     height: 100vh;
-    background-color: transparent;
-    z-index: 60;
     padding: 0 20px;
+    background-color: transparent;
     transition: left .7s linear;
         
     
     &__title {
-        @include s2-SemiBold-24;
+        @include s2-semibold-24;
+
         color: $primary-02; 
     }
+
     &__text {
-        text-align: center;
         color: $grayscale-02;
-        @include s6-Regular-20;
+        text-align: center;
+
+        @include s6-regular-20;
     }
+
     &__box{
         position: relative;
         display: flex;
-        
         flex-direction: column;
-        align-items: center;
         gap: 20px;
+        align-items: center;
         padding: 40px;
         background-color: $grayscale-07;
         border-radius: 20px;
-        @include respond(){
-            padding: 40px;
+
+        @include respond{
             width: 417px;
+            padding: 40px;
     }
     }
+
     &__btn{
-        @include respond(){
+        @include respond{
             width: 100%;
         }
     }
+
     &__btn-close {
         position: absolute;
         top: 16px;
         right: 12px;
-        border: none;
         background-color:transparent;
+        border: none;
     }
 }
 
@@ -59,12 +65,15 @@
     0% {
         left: -100%;
     }
+
     95%{
         left: 7px;
     }
+
     97% {
        left: -7px
     }
+
     100% {
         left: 0;
     }

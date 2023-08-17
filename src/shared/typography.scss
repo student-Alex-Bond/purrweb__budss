@@ -1,0 +1,131 @@
+@mixin t1-bold-128 {
+    font-size: 128px;
+    font-family: Outfit-Bold, Arial, sans-serif;
+    line-height: 106%;
+}
+
+@mixin t2-bold-96 {
+    font-size: 96px;
+    font-family: Outfit-Bold, Arial, sans-serif;
+    line-height: 106%; 
+}
+
+@mixin t3-bold-64 {
+    font-size: 64px;
+    font-family: Outfit-Bold, Arial, sans-serif;
+    line-height: 106%; 
+}
+
+@mixin t4-bold-48 {
+    font-size: 48px;
+    font-family: Outfit-Bold, Arial, sans-serif;
+    line-height: 106%;
+}
+
+@mixin t5-semibold-48{
+    font-size: 48px;
+    font-family: Outfit-SemiBold, Arial, sans-serif;
+    line-height: normal;
+}
+
+@mixin t6-bold-40 {
+    font-size: 40px;
+    font-family: Outfit-Bold, Arial, sans-serif;
+    line-height: 106%;
+}
+
+@mixin t7-bold-32 {
+    font-size: 32px;
+    font-family: Outfit-Bold, Arial, sans-serif;
+    line-height: 106%;
+}
+
+@mixin t8-bold-86 {
+    font-size: 86px;
+    font-family: Outfit-Bold, Arial, sans-serif;
+    line-height: 106%; 
+}
+
+@mixin s1-semibold-36{
+    font-size: 36px;
+    font-family: Outfit-SemiBold, Arial, sans-serif;
+    line-height: normal; 
+}
+
+@mixin s2-semibold-24{
+    font-size: 24px;
+    font-family: Outfit-SemiBold, Arial, sans-serif;
+    line-height: 120%;
+}
+
+@mixin s3-regular-24 {
+    font-size: 24px;
+    font-family: Outfit-Regular, Arial, sans-serif;
+    line-height: 120%;
+}
+
+@mixin s4-semibold-20 {
+    font-size: 20px;
+    font-family: Outfit-SemiBold, Arial, sans-serif;
+    line-height: normal;
+}
+
+@mixin s5-medium-20 {
+    font-size: 20px;
+    font-family: Outfit-Medium, Arial, sans-serif;
+    line-height: normal;   
+}
+
+@mixin s6-regular-20 {
+    font-size: 20px;
+    font-family: Outfit-Regular, Arial, sans-serif;
+    line-height: 120%; 
+}
+
+@mixin s7-light-20{
+    font-size: 20px;
+    font-family: Outfit-Light, Arial, sans-serif;
+    line-height: 140%;
+}
+
+@mixin b1-medium-16{
+    font-size: 16px;
+    font-family: Outfit-Medium, Arial, sans-serif;
+    line-height: normal;
+}
+
+@mixin b2-regular-16{
+    font-size: 16px;
+    font-family: Outfit-Regular, Arial, sans-serif;
+    line-height: normal;
+}
+
+@mixin b3-medium-14{
+    font-size: 14px;
+    font-family: Outfit-Medium, Arial, sans-serif;
+    line-height: 22px;
+}
+
+@mixin b4-regular-14{
+    font-size: 14px;
+    font-family: Outfit-Regular, Arial, sans-serif;
+    line-height: 22px;
+}
+
+@mixin b5-light-14{
+    font-size: 14px;
+    font-family: Outfit-Light, Arial, sans-serif;
+    line-height: 140%;   
+}
+
+@mixin b6-light-14-underline {
+    font-size: 14px;
+    font-family: Outfit-Light, Arial, sans-serif;
+    line-height: 140%; 
+}
+
+@mixin b7-regular-12 {
+    font-size: 12px;
+    font-family: Outfit-Regular, Arial, sans-serif;
+    line-height: 20px; 
+}

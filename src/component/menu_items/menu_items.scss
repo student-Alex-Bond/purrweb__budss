@@ -1,16 +1,15 @@
 .menu {
     &__list {
-        list-style: none;
         display: flex;
-        gap: 16px;
         flex-direction: column;
+        gap: 16px;
+        list-style: none;
     }
-    &__item {
 
-    }
     &__link {
-        @include s5-Medium-20;
-        text-decoration: none;
+        @include s5-medium-20;
+
         color: $grayscale-07;
+        text-decoration: none;
     }
 }

@@ -1,111 +1,136 @@
 .business-grow{
-    background-color: $grayscale-06;
     padding: 40px 16px;
-    @include respond(){
+    background-color: $grayscale-06;
+
+    @include respond{
         padding: 100px 60px;
     }
+
     &__wrapper{
-        padding: 40px 20px;
-        border-radius: 60px;
-        border: 1px solid $grayscale-04;
         margin-bottom: 40px;
-        @include respond(){
+        padding: 40px 20px;
+        border: 1px solid $grayscale-04;
+        border-radius: 60px;
+
+        @include respond{
+            margin-bottom: 100px;
             padding: 60px 0;
             text-align: center;
-            margin-bottom: 100px;
         }
     }
+
     &__description{
-        @include respond(){
+        @include respond{
             display: flex;
         }
             
     }
+
     &__title{
-        @include t6-Bold-40;
-        text-align: center;
+        @include t6-bold-40;
+
         margin-bottom: 40px;
-        @include respond(){
-            @include t3-Bold-64;
+        text-align: center;
+
+        @include respond{
+            @include t3-bold-64;
         }
+
         &-description{
-            text-align: left;
             margin-bottom: 20px;
-            @include respond(){
-                @include t2-Bold-96;
+            text-align: left;
+
+            @include respond{
+                @include t2-bold-96;
             }
 
         }
        
     }
+
     &__text {
-        @include s6-Regular-20;
+        @include s6-regular-20;
+
         margin-bottom: 20px;
-        @include respond(){
-            padding-right: 300px;
+
+        @include respond{
             margin: 0;
+            padding-right: 300px;
         }
     }
+
     &__social-icons{
         display: flex;
         justify-content: space-between;
         height: 132px;
         margin-bottom: 40px;
-        @include respond(){
+
+        @include respond{
+            gap: 40px;
             height: 180px;
             margin: 0;
-            gap: 40px;
         }
     }
+
     &__icon-img {
         width: 64px;
         height: 64px;
-        @include respond(){
+
+        @include respond{
             width: 90px;
             height: 90px;
         }
+
         &:nth-child(even){
             align-self: flex-end;
         }
+
         &--brands{
             width: auto;
             height: auto;
-            @include respond(){
+
+            @include respond{
                 &:nth-child(1){
-                    width: 182px;
                     order: 3;
+                    width: 182px;
                 }
+
                 &:nth-child(2){
-                    width: 209px;
                     order: 2;
+                    width: 209px;
                 }
+
                 &:nth-child(3){
-                    width: 126px;
                     order: 1;
+                    width: 126px;
                 }
+
                 &:nth-child(4){
-                    width: 277px;
                     order: 4;
+                    width: 277px;
                 }
+
                 &:nth-child(5){
-                    width: 184px;
                     order: 5;
+                    width: 184px;
                 }
             }
         }
         
     }
+
     &__brands{
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
         gap: 30px 40px;
+        align-items: center;
         padding: 50px 4px;
-        @include respond(){
-            padding: 0;
-            padding-top: 100px;
+
+        @include respond{
             flex-wrap: nowrap;
             gap: 0 90px;
+            padding: 0;
+            padding-top: 100px;
         }
     }
 }

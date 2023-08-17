@@ -1,0 +1,43 @@
+section.budss-works
+    h2.visually-hidden how works budss 
+    .budss-works__box-animation
+        video(src=require('../../video/animation.webm') muted loop autoplay).budss-works__video You browser not supported video
+        picture.budss-works__img
+            source(media="(max-width: 376px)", srcset=require("../../images/phone-border.png"))
+            source(media="(min-width: 1240px)", srcset=require("../../images/phone-border__desktop.webp"))
+            source(media="(min-width: 1440px)", srcset=(require("../../images/phone-border__desktop__2x.webp")  + ' ' +'2x'))
+            img(src=require('../../images/phone-border.png'), alt="how works")
+    .budss-works__wrapper
+        - var count = 0;
+        while count < 3
+            span.budss-works__rinning-string  How Budss Works
+                span.budss-works__rinning-substring  How Budss Works
+                | 
+                | How Budds Works
+                | 
+                span.budss-works__rinning-substring  How Budss Works
+                | 
+                | How Budds Works
+                | 
+                span.budss-works__rinning-substring  How Budss Works
+                | 
+                | How Budds Works
+                | 
+                span.budss-works__rinning-substring  How Budss Works
+                | 
+                | How Budds Works
+                | 
+                span.budss-works__rinning-substring  How Budss Works
+                | 
+                | How Budds Works
+                | 
+                span.budss-works__rinning-substring  How Budss Works
+                | 
+                | How Budds Works
+                | 
+                span.budss-works__rinning-substring  How Budss Works
+                | 
+                | How Budds Works
+                | 
+            - count += 1;  
+

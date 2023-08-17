@@ -1,12 +1,13 @@
 -
     var advantages = [
-        {percent: '15%', text: 'Increase in Purchase Amount'},
-        {percent: '30%', text: 'Growth in Annual Sales'},
+        {percent: '15%', text: 'Increase in Purchase Amount'},
+        {percent: '30%', text: 'Growth in Annual Sales'},
         {percent: '10%', text: 'Growth in New Customers'},
     ]
 
 section.advantages
+    h2.visually-hidden advantages our product
     each it in advantages
         p.advantages__text= it.percent
             |  
-            span.advantages__string= it.text   
+            span.advantages__string= it.text 

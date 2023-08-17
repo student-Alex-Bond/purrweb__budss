@@ -12,7 +12,7 @@ export default (env) => ({
     },
     output: {
         path: resolve(__dirname, 'dist'),
-        publicPath: '/',
+        publicPath: '',
         filename: 'js/[name].[contenthash:8].js',
         clean: true,
     },
@@ -58,7 +58,7 @@ export default (env) => ({
             },
             {
                 // To use images on pug files:
-                test: /\.(png|jpg|jpeg|ico|svg|webp|mp4)/,
+                test: /\.(png|jpg|jpeg|ico|svg|webp|webm)/,
                 type: 'asset/resource',
                 generator: {
                     filename: 'assets/img/[name].[hash:8][ext]',

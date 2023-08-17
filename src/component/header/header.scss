@@ -1,26 +1,21 @@
 .header {
     position: sticky;
     top: 0;
+    z-index: 3;
     display: flex;
     align-items: center;
     width: 100%;
     padding: 15px 16px;
     background-color: $grayscale-01;
-    z-index: 3;
-    @include respond() {
+
+    @include respond {
         padding: 7px 60px;
     }
+
     &__logo {
-        margin-right: 10px;
-        @include respond(){
-            width: 52px;
-            height: 48px;
-        }
-    }
-    &__name {
-        @include respond(){
-            width: 121px;
-            height: 35px;
+        @include respond{
+            width: 156px;
+            height: 52px;
         }
     }
 }

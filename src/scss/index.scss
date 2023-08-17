@@ -1,14 +1,6 @@
-*,
-::after,
-::before{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-@import '../shared/_variables';
-@import '../shared/_fonts';
-@import '../shared/_typography';
+@import '../shared/variables';
+@import '../shared/fonts';
+@import '../shared/typography';
 @import '../shared/mixins';
 @import '../component/menu_items/menu_items';
 @import '../component/button/button';
@@ -19,12 +11,22 @@
 @import '../component/influencer/influencer';
 @import '../component/form/form';
 @import '../component/modal_success/modal_success';
-@import '../component/about_budds/about_budds';
-@import '../component/budds_works/budds_works';
+@import '../component/about_budss/about_budss';
+@import '../component/budss_works/budss_works';
 @import '../component/advantages/advantages';
-@import '../component/benefit_budds/benefit_budds';
+@import '../component/benefit_budss/benefit_budss';
 @import '../component/business_grow/business_grow';
 @import '../component/footer/footer';
+
+
+*,
+::after,
+::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 
 body{
     position: relative;
@@ -37,13 +39,26 @@ body{
 .container {
     min-width: 375px;
     padding: 0 16px;
-    @include respond(){
-        margin: 0 auto;
+
+    @include respond{
         max-width: 1440px;
+        margin: 0 auto;
         padding: 0;
     }
 }
+
 main {
-    margin: 0 auto;
     max-width: 1440px;
+    margin: 0 auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
 }

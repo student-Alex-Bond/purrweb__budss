@@ -1,25 +1,28 @@
 .cookie {
-    display: grid;
-    grid-template-rows: 0fr;
     position: fixed;
     right: 16px;
     bottom : -50px;
     left: 16px;
     z-index: 55;
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
     background: $grayscale-07;
     border-radius: 16px;
     box-shadow: -10px -5px 30px 0 rgb(141 141 141 / 10%);
     transition: all 1.5s cubic-bezier(.31,.01,.68,1.03);
-    overflow: hidden;
-    @include respond(){
+
+    @include respond{
         right: 0;
         left: 0;
         margin: 0 65px 0 90px;
     }
+
     &__wrapper{
         display: flex;
         padding: 30px 20px;
-        @include respond(){
+
+        @include respond{
             align-items: center;
             justify-content: space-between;
             padding: 30px;
@@ -30,10 +33,11 @@
         padding-bottom: 40px;
         color: $grayscale-01;
 
-        @include s7-Light-20;
-        @include respond(){
-            padding-bottom: 0;
+        @include s7-light-20;
+
+        @include respond{
             padding-right: 140px;
+            padding-bottom: 0;
         }
     }
 
@@ -41,7 +45,8 @@
         display: flex;
         flex-flow: column nowrap;
         gap:20px;
-        @include respond(){
+
+        @include respond{
             flex-direction: row;
         }
 
@@ -49,7 +54,8 @@
             color: $grayscale-00;
             background-color: transparent;
             border: 2px solid $primary-01;
-            @include respond(){
+
+            @include respond{
                 margin-right: 20px;
             }
         }

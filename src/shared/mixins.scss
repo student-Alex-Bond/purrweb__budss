@@ -1,5 +1,5 @@
 @mixin respond() {
-        @media only screen and (min-width: 1240px) {
+        @media only screen and (width >= 1240px) {
             @content;
         }
 }
