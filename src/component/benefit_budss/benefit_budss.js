@@ -14,6 +14,7 @@ export default (() => {
         const img = document.createElement('img');
         img.src = arr[i];
         img.classList.add(`benefit-budss__item-img-1-${i + 1}`);
+        img.setAttribute('alt', 'some image');
         listItems[secondElement].appendChild(img);
     }
     const html = `
@@ -21,7 +22,7 @@ export default (() => {
             <source media="(max-width: 376px)" srcset=${firstImg}></source>
             <source media="(min-width: 1240px)" srcset=${desktopWebpImg}></source>
             <source media="(min-width: 1440px)" srcset='${desktopWebpBigImg} 2x'></source>
-            <img class='benefit-budss__item-img-0 benefit-budss__item-img' src=${firstImg}/>
+            <img class='benefit-budss__item-img-0 benefit-budss__item-img' alt='some img' src=${firstImg}/>
         <picture/>
     `;
     listItems[firstElement].removeChild(deletedImg);
