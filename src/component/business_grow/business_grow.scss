@@ -64,6 +64,7 @@
         justify-content: space-between;
         height: 132px;
         margin-bottom: 40px;
+        list-style: none;
 
         @include respond{
             gap: 40px;
@@ -125,6 +126,7 @@
         gap: 30px 40px;
         align-items: center;
         padding: 50px 4px;
+        list-style: none;
 
         @include respond{
             flex-wrap: nowrap;

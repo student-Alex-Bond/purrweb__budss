@@ -1,8 +1,4 @@
-/* eslint-disable no-plusplus */
-/* eslint-disable no-const-assign */
-/* eslint-disable no-nested-ternary */
 export default (() => {
-    const btns = document.querySelectorAll('button');
     const showPopup = document.querySelector('.form__popup');
     const form = document.querySelector('.form');
     const closeForm = form.querySelector('.form__btn-close');
@@ -43,23 +39,48 @@ export default (() => {
         }
     };
 
-    const inputNumberMask = (event) => {
-        const matrix = '+7(___) ___-__-__';
-        let i = 0;
-
-        const def = matrix.replace(/\D/g, '');
-        let val = event.target.value.replace(/\D/g, '');
-        if (event.type === 'blur') {
-            if (val.length < matrix.match(/([\\_\d])/g).length) {
-                // eslint-disable-next-line no-param-reassign
-                event.target.value = '';
-                return;
-            }
+    const prefixNumber = (str) => {
+        if (str === '7') {
+            return '7 (';
         }
-        if (def.length >= val.length) val = def;
-        // no-nested-ternary, no-const-assign, no-plusplus, no-param-reassign
-        // eslint-disable-next-line no-param-reassign
-        event.target.value = matrix.replace(/./g, (a) => (/[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? '' : a));
+        if (str === '8') {
+            return '8 (';
+        }
+        if (str === '9') {
+            return '7 (9';
+        }
+        return '7 (';
+    };
+    const inputNumberMask = () => {
+        const value = inputs[inputTel].value.replace(/\D+/g, '');
+        const numberLength = 11;
+
+        let result;
+        if (inputs[inputTel].value.includes('+8') || inputs[inputTel].value[0] === '8') {
+            result = '';
+        } else {
+            result = '+';
+        }
+        for (let i = 0; i < value.length && i < numberLength; i += 1) {
+            switch (i) {
+            case 0:
+                result += prefixNumber(value[i]);
+                continue;
+            case 4:
+                result += ') ';
+                break;
+            case 7:
+                result += '-';
+                break;
+            case 9:
+                result += '-';
+                break;
+            default:
+                break;
+            }
+            result += value[i];
+        }
+        inputs[inputTel].value = result;
     };
 
     const sendForm = (event) => {
@@ -75,9 +96,9 @@ export default (() => {
     });
     closeForm.addEventListener('click', showForm);
     form.addEventListener('submit', sendForm);
-    btns.forEach((btn) => {
-        if (btn.textContent === 'Contact sales' && !btn.classList.contains('form__btn')) {
-            btn.addEventListener('click', showForm);
+    document.body.addEventListener('click', (event) => {
+        if (event.target.classList.contains('show-form')) {
+            showForm();
         }
     });
 })();

@@ -1,7 +1,7 @@
 .influencer {
     display: flex;
     flex-direction: column;
-    padding: 51px 0 40px;
+    padding: 51px 16px 40px 16px;
     color: $grayscale-07;
 
     @include respond{

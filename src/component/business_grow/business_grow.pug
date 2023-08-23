@@ -18,14 +18,18 @@ include ../button/button.pug
 section.business-grow
     .business-grow__wrapper 
         h2.business-grow__title Let Your Business Grow
-        +btn('Contact sales')(class='business-grow__btn')
+        +btn('Contact sales')(class='business-grow__btn btn-primary show-form')
     .business-grow__description 
         div
             h2.business-grow__title.business-grow__title-description Your Brand<br> Awareness Maters   
             p.business-grow__text Budss is a husle free solution to put your brand on any digital surface including Instagram, Facebook, Twitter and TikTok 
-        .business-grow__social-icons
+        ul.business-grow__social-icons
             each it in srcIcons
-                img(src=require(it) alt='some icon').business-grow__icon-img
-    .business-grow__brands 
+                li.business-grow__icon-img
+                    a(href='#')
+                        img(src=require(it) alt='some icon').business-grow__icon-img
+    ul.business-grow__brands 
         each it in srcBrands 
-            img(src=require(it) alt='some brand').business-grow__icon-img.business-grow__icon-img--brands
+            li.business-grow__icon-img--brands
+                a(href='#')
+                    img(src=require(it) alt='some brand').business-grow__icon-img.business-grow__icon-img--brands

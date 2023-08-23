@@ -1,16 +1,79 @@
 .btn {
     @include s4-semibold-20;
-
+    position: relative;
     width: 100%;
     padding: 16px 30px;
     color: $grayscale-07;
-    background-color: $primary-01;
     border: none;
+    background-color: transparent;
     border-radius: 16px;
     cursor: pointer;
+    white-space: nowrap;
+    z-index: 1;
+    transition: width .3s ease;
+    overflow: hidden;
+    
+    &-primary {
+        background-color: $primary-01;
+        &::before{
+            content:'';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            visibility: hidden;
+            border-radius: 16px;
+            background: $grayscale-01;
+            transition: all .3s ease;
+            z-index: -1;
+            transform: translateX(-100%);
+        }
+            &:hover {
+                &::before {
+                    width: 100%;
+                    visibility: visible;
+                    transform: translateX(0) scale(1.07);
+            }
+        }
+        &:focus {
+            border: 4px solid $primary-03;
+        }
+        &:active {
+            background-color: $primary-00;
+        }
+        &:disabled{
+            pointer-events: none;
+            background-color: $grayscale-03;
+        }
+        &--disabled {
+            background-color: $grayscale-03;
+        }
+    }
+    &-secondary{
 
-    &-disabled {
-        background-color: $grayscale-03;
+        border: 2px solid $primary-01;
+        &:disabled {
+            border: 2px solid $grayscale-03;
+        }
+        &::before{
+        content:'';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0;
+        border-radius: 16px;
+        //border: 2px solid $primary-01;
+        background: rgba(149, 76, 237, 0.20);
+        transition: all .3s ease;
+    }
+        &:hover {
+            transform: scale(1.07);
+            &::before {
+            width: 100%;
+        }
+    }
     }
 
     @include respond{
