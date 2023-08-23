@@ -31,6 +31,11 @@
         color: $grayscale-00;
         background-color: $grayscale-06;
         border-radius: 20px;
+        &:nth-child(3) {
+            &>.benefit-budss__item_description{
+                padding-right: 10px;
+            } 
+        }
 
         @include respond{
             padding: 0;
