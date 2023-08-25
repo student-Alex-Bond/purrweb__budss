@@ -1,22 +1,13 @@
 -
-    var listItems = [
-        {title: 'Turn your customers into loyal influencers', 
-        text: 'Budss helps businesses harness the exponential power of loyal customers for acquisition and retention.',
-        src: '../../images/benefit__item-1__desktop.png',
-        },
-        {title: 'Harness the power of buying in bulk',
-        text: 'Get at least 2X more sales with Budss Buying Groups. Your customer base will grow exponentially as your customers add their friends & family to your personalized group.', 
-        src: '../../images/benefit__item-2.svg', 
-         },
-        {title: 'Supercharge Loyalty With Instant Cash Back', 
-        text: 'Budss allows for shoppers to earn immediate cash back at their favorite stores.',
-        src: '../../images/benefit__item-3.svg'
-         },
-        {title: 'Seasoned with AI and Gamification', 
-        text: 'AI programming creates a personalized customer journey, offering recommendations for their next purchase and optimizing rewards for after purchase.', 
-        src: '../../images/benefit__item-4.svg',
-        },
-    ]
+    var cardTitle_1 = 'Turn your customers into loyal influencers'
+    var cardText_1 = 'Budss helps businesses harness the exponential power of loyal customers for acquisition and retention.' 
+    var cardTitle_2 = 'Harness the power of buying in bulk'
+    var cardText_2 = 'Get at least 2X more sales with Budss Buying Groups. Your customer base will grow exponentially as your customers add their friends & family to your personalized group.'
+    var cardTitle_3 = 'Supercharge Loyalty With Instant Cash Back'
+    var cardText_3 = 'Budss allows for shoppers to earn immediate cash back at their favorite stores.'
+    var cardTitle_4 = 'Seasoned with AI and Gamification'
+    var cardText_4 = 'AI programming creates a personalized customer journey, offering recommendations for their next purchase and optimizing rewards for after purchase.'
+    
 section.benefit-budss 
     h3.benefit-budss__title Why Budss
     p.benefit-budss__text 
@@ -24,10 +15,30 @@ section.benefit-budss
         | 
         span.benefit-budss__text-accent To Grow Your Business    
     ul.benefit-budss__list
-        each it, index in listItems 
-            - var src= it.src
-            li.benefit-budss__item 
-                .benefit-budss__item_description
-                    h4.benefit-budss__item_title= it.title 
-                    p.benefit-budss__item_text= it.text 
-                img(src=require(src), alt=('item-' + index) class=('benefit-budss__item-img-' + index)).benefit-budss__item-img
+        li.benefit-budss__item 
+            .benefit-budss__item_description
+                h4.benefit-budss__item_title= cardTitle_1 
+                p.benefit-budss__item_text= cardText_1 
+            picture.benefit-budss__item-img-0.benefit-budss__item-img
+                source(media="(max-width: 376px)", srcset=require('../../images/benefit__item-1.svg'))
+                source(media="(min-width: 841px)", srcset=require('../../images/benefit__item-1__desktop.webp'))
+                source(media="(min-width: 1439px)", srcset=(require('../../images/benefit__item-1__desktop__2x.webp') + ' ' +'2x'))
+                img(src=require('../../images/benefit__item-1.svg') alt='first image card item').benefit-budss__item-img-0.benefit-budss__item-img 
+        li.benefit-budss__item 
+            .benefit-budss__item_description
+                h4.benefit-budss__item_title= cardTitle_2 
+                p.benefit-budss__item_text= cardText_2 
+            .benefit-budss__item-wrapper-imgs         
+                img(src=require('../../images/benefit__item-2.svg'), alt=('second card image') class=('benefit-budss__item-img-1')).benefit-budss__item-img
+                img(src=require('../../images/benefit__item-2-2.svg'), alt=('second card image') class=('benefit-budss__item-img-1-1')).benefit-budss__item-img
+                img(src=require('../../images/benefit__item-2-3.svg'), alt=('second card image') class=('benefit-budss__item-img-1-2')).benefit-budss__item-img
+        li.benefit-budss__item 
+            .benefit-budss__item_description
+                h4.benefit-budss__item_title= cardTitle_3
+                p.benefit-budss__item_text= cardText_3     
+            img(src=require('../../images/benefit__item-3.svg'), alt=('third card image') class=('benefit-budss__item-img-2')).benefit-budss__item-img    
+        li.benefit-budss__item 
+            .benefit-budss__item_description
+                h4.benefit-budss__item_title= cardTitle_4
+                p.benefit-budss__item_text= cardText_4     
+            img(src=require('../../images/benefit__item-4.svg'), alt=('fourth card image') class=('benefit-budss__item-img-3')).benefit-budss__item-img
