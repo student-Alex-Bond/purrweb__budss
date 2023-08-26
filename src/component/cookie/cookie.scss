@@ -19,8 +19,8 @@
     }
 
     &__wrapper{
-        flex-direction: column;
         display: flex;
+        flex-direction: column;
         padding: 30px 20px;
 
         @include respond{

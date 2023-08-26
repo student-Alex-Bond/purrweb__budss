@@ -31,16 +31,22 @@
         color: $grayscale-00;
         background-color: $grayscale-06;
         border-radius: 20px;
+
         &:nth-child(3) {
+            display: flex;
+            flex-direction: column;
+
             &>.benefit-budss__item_description{
                 padding-right: 10px;
             } 
         }
+
         &-wrapper-imgs{
             display: flex;
             align-items: flex-end;
             justify-content: space-between;
-            @include respond(){
+
+            @include respond{
                 display: block;
             }
         }
@@ -76,6 +82,7 @@
 
                 &>.benefit-budss__item_description {
                     padding: 40px 60px 0 40px;
+
                     &>.benefit-budss__item_text{
                         padding-right: 125px;
                     }
@@ -91,10 +98,6 @@
                     padding: 40px 38px 86px 40px;
                 }
             }
-        }
-        &:nth-child(3){
-            display: flex;
-            flex-direction: column;
         }
 
         &_text{
@@ -149,14 +152,14 @@
                 }
 
                 &-2 {
+                    align-self: flex-end;
                     width: 61px;
                     height: 116px;
                     transform: translateY(-7px);
-                    align-self: flex-end;
 
                     @include respond{
                         position: absolute;
-                        right: 0px;
+                        right: 0;
                         bottom: 113px;
                         width: 88px;
                         height: 167px;

@@ -7,7 +7,10 @@
     var cardText_3 = 'Budss allows for shoppers to earn immediate cash back at their favorite stores.'
     var cardTitle_4 = 'Seasoned with AI and Gamification'
     var cardText_4 = 'AI programming creates a personalized customer journey, offering recommendations for their next purchase and optimizing rewards for after purchase.'
-    
+mixin text(title, text)
+    h4.benefit-budss__item_title= title 
+    p.benefit-budss__item_text= text
+
 section.benefit-budss 
     h3.benefit-budss__title Why Budss
     p.benefit-budss__text 
@@ -17,8 +20,7 @@ section.benefit-budss
     ul.benefit-budss__list
         li.benefit-budss__item 
             .benefit-budss__item_description
-                h4.benefit-budss__item_title= cardTitle_1 
-                p.benefit-budss__item_text= cardText_1 
+                +text(cardTitle_1, cardText_1)
             picture.benefit-budss__item-img-0.benefit-budss__item-img
                 source(media="(max-width: 376px)", srcset=require('../../images/benefit__item-1.svg'))
                 source(media="(min-width: 841px)", srcset=require('../../images/benefit__item-1__desktop.webp'))
@@ -26,19 +28,16 @@ section.benefit-budss
                 img(src=require('../../images/benefit__item-1.svg') alt='first image card item').benefit-budss__item-img-0.benefit-budss__item-img 
         li.benefit-budss__item 
             .benefit-budss__item_description
-                h4.benefit-budss__item_title= cardTitle_2 
-                p.benefit-budss__item_text= cardText_2 
+                +text(cardTitle_2, cardText_2)
             .benefit-budss__item-wrapper-imgs         
                 img(src=require('../../images/benefit__item-2.svg'), alt=('second card image') class=('benefit-budss__item-img-1')).benefit-budss__item-img
                 img(src=require('../../images/benefit__item-2-2.svg'), alt=('second card image') class=('benefit-budss__item-img-1-1')).benefit-budss__item-img
                 img(src=require('../../images/benefit__item-2-3.svg'), alt=('second card image') class=('benefit-budss__item-img-1-2')).benefit-budss__item-img
         li.benefit-budss__item 
             .benefit-budss__item_description
-                h4.benefit-budss__item_title= cardTitle_3
-                p.benefit-budss__item_text= cardText_3     
+                +text(cardTitle_3, cardText_3)     
             img(src=require('../../images/benefit__item-3.svg'), alt=('third card image') class=('benefit-budss__item-img-2')).benefit-budss__item-img    
         li.benefit-budss__item 
             .benefit-budss__item_description
-                h4.benefit-budss__item_title= cardTitle_4
-                p.benefit-budss__item_text= cardText_4     
+                +text(cardTitle_4, cardText_4)     
             img(src=require('../../images/benefit__item-4.svg'), alt=('fourth card image') class=('benefit-budss__item-img-3')).benefit-budss__item-img

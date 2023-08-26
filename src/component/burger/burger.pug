@@ -9,7 +9,7 @@ nav.nav
         img(src=require('../../images/icons/icon__close.svg') width=40 height=40 alt='icon closed').nav__img   
         +btn('Contact sales')(class='nav__btn btn-secondary show-form')
         ul.nav__menu
-            each val in menuItems
+            each link in menuItems
                 li.nav__menu_item
-                    a(href="#").nav__menu_link= val
+                    a(href="#").nav__menu_link= link
             
