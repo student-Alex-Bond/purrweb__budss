@@ -33,5 +33,8 @@ module.exports = {
             process.platform === 'win32' ? 'windows' : 'unix',
         ],
         'no-continue': 'off',
+        'no-unused-expressions': 'off',
+        'no-return-assign': 'off',
+        'no-param-reassign': 'off',
     },
 };
