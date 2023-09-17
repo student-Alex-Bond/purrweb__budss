@@ -12,5 +12,5 @@
 <h2>Код стиль для JavaScript</h2>
 <p>Airbnb</p>
 <h2>Ссылка на сайт</h2>
-<a href='https://student-alex-bond.github.io/purrweb__budss/dist/'>budds</a>
+<a href='https://student-alex-bond.github.io/purrweb__budss/dist/'>budss</a>
 
