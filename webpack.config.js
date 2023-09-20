@@ -54,10 +54,8 @@ export default (env) => ({
             {
                 test: /\.(css|sass|scss)$/,
                 use: ['css-loader', 'sass-loader'],
-                // ☝🏽 Load Sass files
             },
             {
-                // To use images on pug files:
                 test: /\.(png|jpg|jpeg|ico|svg|webp|webm)/,
                 type: 'asset/resource',
                 generator: {
@@ -65,7 +63,6 @@ export default (env) => ({
                 },
             },
             {
-                // To use images on pug files:
                 test: /\.(svg)/,
                 type: 'asset/resource',
                 generator: {
@@ -73,7 +70,6 @@ export default (env) => ({
                 },
             },
             {
-                // To use fonts on pug files:
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
                 type: 'asset/resource',
                 generator: {
@@ -88,7 +84,6 @@ export default (env) => ({
         },
         watchFiles: {
             paths: ['./src/**/*.*', '**/*.scss*'],
-            // ☝🏽 Enables HMR in these folders
             options: {
                 usePolling: false,
             },
@@ -102,5 +97,4 @@ export default (env) => ({
         port: env.port || 3000,
     },
     stats: 'errors-only',
-    // ☝🏽 For a cleaner dev-server run
 });
