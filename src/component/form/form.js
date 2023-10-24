@@ -94,11 +94,13 @@ export default (() => {
     inputs.forEach((input) => {
         input.addEventListener('keyup', validateForm);
     });
-    closeForm.addEventListener('click', showForm);
-    form.addEventListener('submit', sendForm);
-    document.body.addEventListener('click', (event) => {
+
+    const viewForm = (event) => {
         if (event.target.classList.contains('show-form')) {
             showForm();
         }
-    });
+    };
+    closeForm.addEventListener('click', showForm);
+    form.addEventListener('submit', sendForm);
+    document.body.addEventListener('click', viewForm);
 })();

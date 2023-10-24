@@ -7,9 +7,11 @@ export default (() => {
         clearTimeout(timerId);
     }, 3000);
 
+    const removeCookie = () => {
+        cookie.classList.remove('view-cookie');
+    };
+
     childrenButtonsCookie.forEach((elem) => {
-        elem.addEventListener('click', () => {
-            cookie.classList.remove('view-cookie');
-        });
+        elem.addEventListener('click', removeCookie);
     });
 })();
